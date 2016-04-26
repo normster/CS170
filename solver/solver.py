@@ -1,4 +1,4 @@
-import sys, itertools
+import sys, collections, itertools
 
 
 def main(argv):
@@ -21,6 +21,27 @@ def solve(filename, iterations):
     #find <5-cycles
     cycles = {}
     for i in range(2, 6):
+        #l should be list of i-cycles
+        #[(1, 2, 3), ...]
+        l = []
+        for j in range(num_nodes):
+            if j not in closed:
+                tmp = cycle(j, i, graph, num_nodes)
+
+        cycles[i] = l
+
+def cycle(node, depth, graph, num_nodes):
+    S = collections.deque() 
+    closed = set()
+    S.append(node)
+    
+    while S is not empty:
+        v = S.pop()
+        closed.add(v)
+        for i in range(node+1, num_nodes):
+            if graph[v][i]:
+                S.append(i)
+
 
 
 if __name__ == "__main__":
