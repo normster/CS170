@@ -17,7 +17,12 @@ def parse(filename):
     num_nodes = int(f.readline())
     children = f.readline().split()
     for _ in range(num_nodes):
-        graph.append(f.readline().split())
+        line = f.readline().split()
+        tmp = set()
+        for i in range(num_nodes):
+            if line[i]:
+                tmp.add(i)
+        graph.append(tmp)
 
     return graph, num_nodes
 
@@ -46,13 +51,12 @@ def cycle(node, length, graph, num_nodes):
     while S:
         v = S.pop()
         if len(v) == length:
-            if graph[v[-1]][node]:
+            if node in graph[v[-1]]:
                 retval.append(v)
         else:
-            for i in range(node+1, num_nodes):
-                #notice we do not consider nodes <i, we assume those cycles have already been found
-                if graph[v[-1]][i] and i not in v:
-                    S.append(v + [i])
+            for adj in graph[v[-1]]:
+                if adj > node:
+                    S.append(v + [adj])
 
     return retval
 
