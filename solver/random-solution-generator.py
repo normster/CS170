@@ -3,6 +3,8 @@ import Queue
 import operator
 
 CYCLES_PER_NODE = 10
+DP_MAX_SIZE = 20
+SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
 
 #creating graph
 def read_graph(filename):
@@ -27,13 +29,20 @@ def main(argv):
         print("Missing command-line")
     else:
         if argv[0] == "all":
-            for j in range(1, 493):
-                graph, num_nodes, children = read_graph("%d.in" % j)
-                # generating a remaining nodes variable to keep track of nodes which have not been used in cycles
-                nodes_left = [i for i in range(num_nodes)]
-                if j != 12 and j != 15 and j!= 50 and j!= 102 and j!= 128 and j!= 154 and j != 219 and j != 238 and j != 258 and j!= 352 and j != 369 and j!= 409 and j !=418 and j!= 429 and j != 465:
-                	penalty = random_solution(graph, num_nodes, children, nodes_left)
-                	print("Penalty for instance %d: %d" % (j, penalty))
+            for instance in range(1, 493):
+                if instance not in SKIPPED:
+                    graph, num_nodes, children = read_graph("%d.in" % instance)
+                    nodes_left = [i for i in range(num_nodes)]
+                    components = component_finder(graph, num_nodes)
+                    solution = []
+                    for c in components:
+                        if not acyclic(c):
+                            if size(c) > DP_MAX_SIZE:
+                                solution += local_search(c)
+                            else:
+                                solution += dynamic_programming(c)
+
+                    print("Penalty for instance %d: %d" % (instance, penalty(solution)))
 
         else:
             graph, num_nodes, children = read_graph(argv[0])
@@ -41,6 +50,15 @@ def main(argv):
             nodes_left = [i for i in range(num_nodes)]
             penalty = random_solution(graph, num_nodes, children, nodes_left)
             print("Penalty: " + str(penalty))
+
+def local_search():
+    current = random_solution()
+    current_penalty = penalty(current)
+    while True:
+        best_neighbor = improve(current)
+        best_penalty = penalty(best_neighbor)
+        if best_penalty >= current_penalty:
+            break
 
 def random_solution(graph, num_nodes, children, nodes_left):
     #for now nodeIterationOrder is completely random
@@ -54,6 +72,9 @@ def random_solution(graph, num_nodes, children, nodes_left):
             #once we've incorporated a cycle into the solution, we remove the nodes from consideration
             for nd in cycle:
                 nodes_left.remove(nd)
+    #return cycles used
+
+def penalty():
     penalty = 0
     for node in nodes_left:
         if node in children:
