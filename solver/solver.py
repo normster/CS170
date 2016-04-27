@@ -29,7 +29,7 @@ def parse(filename):
 def solve(graph, num_nodes, iterations):
     #find <5-cycles
     cycles = {}
-    for i in range(2, 6):
+    for i in range(5, 6):
         #l should be list of i-cycles
         #[(1, 2, 3), ...]
         l = []
