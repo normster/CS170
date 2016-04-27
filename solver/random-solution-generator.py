@@ -13,73 +13,73 @@ def read_graph(filename):
     children = set(f.readline().split())
     children = map(int, children)
     for _ in range(num_nodes):
-		s = f.readline().split()
-		tmp = []
-		for i in range(num_nodes):
-			if s[i] == '1':
-				tmp += [i]
-		graph.append(tmp)
+        s = f.readline().split()
+        tmp = []
+        for i in range(num_nodes):
+            if s[i] == '1':
+                tmp += [i]
+        graph.append(tmp)
     return graph, num_nodes, children
 
 
 def main(argv):
-	if len(argv) != 1:
-		print("Missing command-line")
+    if len(argv) != 1:
+        print("Missing command-line")
     else:
         if argv[0] == "all":
-            for i in range(1, 493):
-                graph, num_nodes, children = read_graph("%d.in" % i)
-		        # generating a remaining nodes variable to keep track of nodes which have not been used in cycles
-		        nodes_left = [i for i in range(num_nodes)]
-		        penalty = random_solution(graph, num_nodes, children, nodes_left)
-		        print("Penalty for instance %d: %d" % (i, penalty))
+            for j in range(1, 493):
+                graph, num_nodes, children = read_graph("%d.in" % j)
+                # generating a remaining nodes variable to keep track of nodes which have not been used in cycles
+                nodes_left = [i for i in range(num_nodes)]
+                if j != 12 and j != 15 and j!= 50 and j!= 102 and j!= 128 and j!= 154 and j != 219 and j != 238 and j != 258 and j!= 352 and j != 369 and j!= 409 and j !=418 and j!= 429 and j != 465:
+                	penalty = random_solution(graph, num_nodes, children, nodes_left)
+                	print("Penalty for instance %d: %d" % (j, penalty))
 
         else:
-		    graph, num_nodes, children = read_graph(argv[0])
-		    # generating a remaining nodes variable to keep track of nodes which have not been used in cycles
-		    nodes_left = [i for i in range(num_nodes)]
-		    penalty = random_solution(graph, num_nodes, children, nodes_left)
-		    print("Penalty: " + str(penalty))
+            graph, num_nodes, children = read_graph(argv[0])
+            # generating a remaining nodes variable to keep track of nodes which have not been used in cycles
+            nodes_left = [i for i in range(num_nodes)]
+            penalty = random_solution(graph, num_nodes, children, nodes_left)
+            print("Penalty: " + str(penalty))
 
 def random_solution(graph, num_nodes, children, nodes_left):
-	#for now nodeIterationOrder is completely random
-	order = iteration_order(graph, num_nodes)
-	for node in order:
-	  	if node in nodes_left:
-	  		#finding cycles starting at that node
-	   		cycles = find_cycles_dfs(graph, node, nodes_left)
-	   		print("Cycles starting at node" +str(node)+" : " + str(cycles))
-	   		#choosing a completely random cycle
-			cycle = choose_cycle(cycles, children)
-			#once we've incorporated a cycle into the solution, we remove the nodes from consideration
-			for nd in cycle:
-				nodes_left.remove(nd)
-	penalty = 0
-	for node in nodes_left:
-		if node in children:
-			penalty += 2
-		else:
-			penalty +=1
-	return penalty
+    #for now nodeIterationOrder is completely random
+    order = iteration_order(graph, num_nodes)
+    for node in order:
+          if node in nodes_left:
+              #finding cycles starting at that node
+            cycles = find_cycles_dfs(graph, node, nodes_left)
+               #choosing a completely random cycle
+            cycle = choose_cycle(cycles, children)
+            #once we've incorporated a cycle into the solution, we remove the nodes from consideration
+            for nd in cycle:
+                nodes_left.remove(nd)
+    penalty = 0
+    for node in nodes_left:
+        if node in children:
+            penalty += 2
+        else:
+            penalty +=1
+    return penalty
 
 def iteration_order(graph, num_nodes):
-	nodes = [i for i in range(0,num_nodes)]
-	weightVector = assign_weights(graph, nodes)
-	sortedWeightVector = sorted(weightVector.items(), key=operator.itemgetter(1))
-	nodeIterationOrder = []
-	#print(sortedWeightVector)
-	for tup in sortedWeightVector:
-		nodeIterationOrder += [tup[0]]
-	return nodeIterationOrder
+    nodes = [i for i in range(0,num_nodes)]
+    weightVector = assign_weights(graph, nodes)
+    sortedWeightVector = sorted(weightVector.items(), key=operator.itemgetter(1))
+    nodeIterationOrder = []
+    #print(sortedWeightVector)
+    for tup in sortedWeightVector:
+        nodeIterationOrder += [tup[0]]
+    return nodeIterationOrder
 
 
 def assign_weights(graph, nodes):
-	weightVector = {}
-	for node in nodes:
-		weightVector[node] = 0
-		for n in graph[node]:
-			weightVector[node] += 1
-	return weightVector
+    weightVector = {}
+    for node in nodes:
+        weightVector[node] = 0
+        for n in graph[node]:
+            weightVector[node] += 1
+    return weightVector
 
 def find_cycles_dfs(graph, node, nodes_left):
     cycles = []
@@ -100,46 +100,46 @@ def find_cycles_dfs(graph, node, nodes_left):
     return cycles
 
 def bfs(graph, node, remainingNodes):
-	#list of cycles for a particular node
-	cycles = []
-	q = Queue.Queue()
-	q.put([node])
-	while q.qsize() > 0:
-		#current list of nodes in a prospective cycle
-		currentThread = q.get()
-		#accessing the tail
-		tail = currentThread[len(currentThread) - 1]
-		#checking if the tail has a backedge
-		if tail == node and len(currentThread) > 1:
-			cycles += [currentThread[0: len(currentThread) - 1]]
-			#print("Cycle detected: " + str(cycles))
-			continue
-		elif tail in currentThread[1: len(currentThread) - 1]:
-			# if we have a smaller cycle along the path, there's no point tracking it
-			continue
-		for n in graph[tail]:
-		 	c = copy.copy(currentThread)
-		 	if n in remainingNodes:
-		 		c += [n]
-		 		if len(c) <= 6:
-		 			q.put(c)
+    #list of cycles for a particular node
+    cycles = []
+    q = Queue.Queue()
+    q.put([node])
+    while q.qsize() > 0:
+        #current list of nodes in a prospective cycle
+        currentThread = q.get()
+        #accessing the tail
+        tail = currentThread[len(currentThread) - 1]
+        #checking if the tail has a backedge
+        if tail == node and len(currentThread) > 1:
+            cycles += [currentThread[0: len(currentThread) - 1]]
+            #print("Cycle detected: " + str(cycles))
+            continue
+        elif tail in currentThread[1: len(currentThread) - 1]:
+            # if we have a smaller cycle along the path, there's no point tracking it
+            continue
+        for n in graph[tail]:
+             c = copy.copy(currentThread)
+             if n in remainingNodes:
+                 c += [n]
+                 if len(c) <= 6:
+                     q.put(c)
 
-	#print("Done detecting")
-	return cycles
+    #print("Done detecting")
+    return cycles
 
 def choose_cycle(cycles, children):
-	cycle = []
-	if len(cycles) != 0:
-		cycle = random.choice(cycles)
-	return cycle
+    cycle = []
+    if len(cycles) != 0:
+        cycle = random.choice(cycles)
+    return cycle
 
 def sample(dictionary, range):
-	r = random.random(0, range)
-	s = 0
-	for key in dictionary.keySet():
-		s += dictionary.get(k)
-		if r <= s:
-			return dictionary.get(k)
+    r = random.random(0, range)
+    s = 0
+    for key in dictionary.keySet():
+        s += dictionary.get(k)
+        if r <= s:
+            return dictionary.get(k)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
