@@ -1,5 +1,6 @@
 import sys, collections, itertools, random, copy
 import Queue
+import operator
 
 #creating graph 
 def readGraph(filename):
@@ -36,6 +37,7 @@ def randomSolution(graph, num_nodes, children, remainingNodes):
 	  	if node in remainingNodes:
 	  		#finding cycles starting at that node
 	   		cycles = bfs(graph, node, remainingNodes)
+	   		#print("Cycles starting at node" +str(node)+" : " + str(cycles))
 	   		#choosing a completely random cycle
 			cycle = chooseCycle(cycles, children)
 			#once we've incorporated a cycle into the solution, we remove the nodes from consideration
@@ -54,13 +56,24 @@ def randomSolution(graph, num_nodes, children, remainingNodes):
 	
 	
 def randomizeNodeIterationOrder(graph, num_nodes):
-	nodes = [i for i in range(num_nodes)]
+	nodes = [i for i in range(0,num_nodes)]
+	weightVector = assignWeights(graph, nodes)
+	sortedWeightVector = sorted(weightVector.items(), key=operator.itemgetter(1))
 	nodeIterationOrder = []
-	while len(nodes) != 0:
-		node = random.choice(nodes)
-		nodeIterationOrder += [node]
-		nodes.remove(node)
+	#print(sortedWeightVector)
+	for tup in sortedWeightVector:
+		nodeIterationOrder += [tup[0]]
 	return nodeIterationOrder
+
+	
+def assignWeights(graph, nodes):
+	weightVector = {}
+	for node in nodes:
+		weightVector[node] = 0
+		for n in graph[node]:
+			weightVector[node] += 1
+	return weightVector
+
 
 def bfs(graph, node, remainingNodes):
 	#list of cycles for a particular node
@@ -75,6 +88,7 @@ def bfs(graph, node, remainingNodes):
 		#checking if the tail has a backedge
 		if tail == node and len(currentThread) > 1:
 			cycles += [currentThread[0: len(currentThread) - 1]]
+			#print("Cycle detected: " + str(cycles))
 			continue	
 		elif tail in currentThread[1: len(currentThread) - 1]:
 			# if we have a smaller cycle along the path, there's no point tracking it
@@ -85,6 +99,8 @@ def bfs(graph, node, remainingNodes):
 		 		c += [n]
 		 		if len(c) <= 6:
 		 			q.put(c)
+
+	#print("Done detecting")
 	return cycles
 	
 
@@ -105,6 +121,13 @@ def chooseCycle(cycles, children):
 
 
 
+def sample(dictionary, range):
+	r = random.random(0, range)
+	s = 0
+	for key in dictionary.keySet():
+		s += dictionary.get(k)
+		if r <= s:
+			return dictionary.get(k)
 
 
 
