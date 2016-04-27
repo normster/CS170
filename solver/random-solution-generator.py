@@ -3,7 +3,7 @@ import Queue
 import operator
 
 #creating graph 
-def readGraph(filename):
+def read_graph(filename):
 	f = open("instances/" + filename, 'r')
 	#create graph
 	graph = []
@@ -30,7 +30,7 @@ def main(argv):
 		penalty = randomSolution(graph, num_nodes, children, remainingNodes)
 		print("Penalty: " + str(penalty))
 		
-def randomSolution(graph, num_nodes, children, remainingNodes):
+def random_solution(graph, num_nodes, children, remainingNodes):
 	#for now nodeIterationOrder is completely random
 	nodeIterationOrder = randomizeNodeIterationOrder(graph, num_nodes)
 	for node in nodeIterationOrder:
@@ -55,7 +55,7 @@ def randomSolution(graph, num_nodes, children, remainingNodes):
 
 	
 	
-def randomizeNodeIterationOrder(graph, num_nodes):
+def randomize_node_iteration_order(graph, num_nodes):
 	nodes = [i for i in range(0,num_nodes)]
 	weightVector = assignWeights(graph, nodes)
 	sortedWeightVector = sorted(weightVector.items(), key=operator.itemgetter(1))
@@ -66,7 +66,7 @@ def randomizeNodeIterationOrder(graph, num_nodes):
 	return nodeIterationOrder
 
 	
-def assignWeights(graph, nodes):
+def assign_weights(graph, nodes):
 	weightVector = {}
 	for node in nodes:
 		weightVector[node] = 0
@@ -108,7 +108,7 @@ def bfs(graph, node, remainingNodes):
 
 
 	
-def chooseCycle(cycles, children):
+def choose_cycle(cycles, children):
 	cycle = []
 	if len(cycles) != 0:
 		cycle = random.choice(cycles)
