@@ -17,6 +17,7 @@ def parse(filename):
     graph = []
     num_nodes = int(f.readline())
     children = f.readline().split()
+<<<<<<< 0471dace119a78efa4097152a01add0deb56ac56
     for _ in range(num_nodes):
         line = f.readline().split()
         tmp = set()
@@ -24,6 +25,10 @@ def parse(filename):
             if line[i]:
                 tmp.add(i)
         graph.append(tmp)
+=======
+    for i in range(num_nodes):
+        f.readline().split())
+>>>>>>> Added random solution generator file(incomplete)
 
     return graph, num_nodes
 
