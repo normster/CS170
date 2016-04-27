@@ -16,8 +16,8 @@ def parse(filename):
     graph = []
     num_nodes = int(f.readline())
     children = f.readline().split()
-    for _ in range(num_nodes):
-        graph.append(f.readline().split())
+    for i in range(num_nodes):
+        f.readline().split())
 
     return graph, num_nodes
 
