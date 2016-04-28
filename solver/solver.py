@@ -4,11 +4,13 @@ import random
 import Queue
 import operator
 import scc
+import copy
 
 CYCLES_PER_NODE = 10
 DP_MAX_SIZE = 20
 SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
 SEARCH_ITERATIONS = 10
+remVertMem = {}
 
 #creating graph
 def read_graph(filename):
@@ -20,12 +22,12 @@ def read_graph(filename):
     children = map(int, children)
     for _ in range(num_nodes):
         s = f.readline().split()
-        tmp = []
+        tmp = set()
         for i in range(num_nodes):
             if s[i] == '1':
-                tmp += [i]
+                tmp.add(i)
         graph.append(tmp)
-    return graph, num_nodes, children
+    return graph, children
 
 def main(argv):
     if len(argv) != 1:
@@ -36,15 +38,15 @@ def main(argv):
                 if instance not in SKIPPED:
                     solve(instance)
         else:
-            solve(argv[0])
+            solve(int(argv[0]))
 
 def solve(instance):
-    graph, num_nodes, children = read_graph("%d.in" % instance)
-    nodes_left = [i for i in range(num_nodes)]
+    graph, children = read_graph("%d.in" % instance)
+    nodes_left = [i for i in range(len(graph))]
     components = scc.scc(graph)
     solution = []
     for c in components:
-        if not acyclic(c):
+        if not acyclic(graph, c):
             if len(c) > DP_MAX_SIZE:
                 best_solution = None
                 best_penalty = float("-inf")
@@ -61,13 +63,18 @@ def solve(instance):
                 solution.extend(best_solution)
             else:
                 solution.extend(dynamic_programming())
-                # clear dynamic programming dict remVertMem
+                remVertMem = {}
 
     print("Penalty for instance %d: %d" % (instance, penalty_overall(graph, solution, children)))
 
 def acyclic(graph, component):
+    if not component:
+        return True
+
     S = collections.deque()
-    S.append(next(iter(s)))
+    start = component.pop()
+    component.add(start)
+    S.append(start)
     visited = set()
     while S:
         current = S.pop()
@@ -87,18 +94,16 @@ def local_search(graph, component, children, solution, leftovers):
     while True:
         best_neighbor = None
         best_penalty = float("inf")
+        max_penalty = penalty_reduction(graph, [[n for n in component]], children)
         for cycle in current:
-            nodes_left = cycle | leftovers
-            neighbor = dynamic_programming()
-            # clear remVertMem memoization dict across calls
-            if not best_neighbor:
+            nodes_left = set(cycle) | leftovers
+            neighbor = dynamic_programming(graph, nodes_left, children)
+            neighbor_penalty = penalty_reduction(graph, neighbor, children)
+            if not best_neighbor or neighbor_penalty > best_penalty:
                 best_neighbor = neighbor
-                best_penalty = penalty(graph, neighbor, children)
-            current_penalty = penalty_reduction(graph, neighbor, children)
-            if current_penalty > best_penalty:
-                best_neighbor = neighbor
-                best_penalty = current_penalty
-        if best_penalty <= current_penalty:
+                best_penalty = neighbor_penalty
+        
+        if best_penalty <= current_penalty or best_penalty == max_penalty:
             break
         else:
             current = best_neighbor
@@ -121,21 +126,20 @@ def random_solution(graph, component, children):
             solution.append(cycle)
             for nd in cycle:
                 nodes_left.remove(nd)
-    solution, nodes_left
+    return solution, nodes_left
 
 def dynamic_programming(graph, V, children):
-    
     minOverVertices = []
 
-    if (len(V) == 0):
-        return [0,[]]
+    if not V:
+        return []
 
     for v in V:
-        cycles = bfs(graph, v, V)
+        cycles = bfs(graph, V, v)
         minOverCycles = []
 
         if (len(cycles) == 0):
-            minOverCycles.append([penalty(V, children), []])
+            minOverCycles.append([penalty_reduction(graph, V, children), []])
         else:
             for cycle in cycles:
                 remainingVertices = list(set(V) - set(cycle))
@@ -214,7 +218,7 @@ def find_cycles_dfs(graph, node, nodes_left):
                     S.append(current + [neighbor])
     return cycles
 
-def bfs(graph, node, nodes_left):
+def bfs(graph, nodes_left, node):
     #list of cycles for a particular node
     cycles = []
     q = Queue.Queue()
