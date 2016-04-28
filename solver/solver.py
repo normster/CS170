@@ -6,8 +6,8 @@ import operator
 import scc
 import copy
 
-CYCLES_PER_NODE = 10
-DP_MAX_SIZE = 20
+CYCLES_PER_NODE = 5
+DP_MAX_SIZE = 10
 SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
 SEARCH_ITERATIONS = 10
 remVertMem = {}
@@ -62,7 +62,7 @@ def solve(instance):
                         break
                 solution.extend(best_solution)
             else:
-                solution.extend(dynamic_programming())
+                solution.extend(dynamic_programming(graph, c, children)[1])
                 remVertMem = {}
 
     print("Penalty for instance %d: %d" % (instance, penalty_overall(graph, solution, children)))
@@ -89,27 +89,35 @@ def acyclic(graph, component):
 
 def local_search(graph, component, children, solution, leftovers):
     current = copy.copy(solution)
-    current_penalty = penalty_reduction(graph, current, children)
     
     while True:
         best_neighbor = None
-        best_penalty = float("-inf")
-        max_penalty = penalty_reduction(graph, [[n for n in component]], children)
+        best_penalty = float("inf")
+        best_cycle = None
         for cycle in current:
             nodes_left = set(cycle) | leftovers
-            neighbor = dynamic_programming(graph, nodes_left, children)
-            neighbor_penalty = penalty_reduction(graph, neighbor, children)
-            if not best_neighbor or neighbor_penalty > best_penalty:
+            tmp = dynamic_programming(graph, nodes_left, children)
+            neighbor = tmp[1]
+            neighbor_penalty = tmp[0]
+            if not best_neighbor or neighbor_penalty < best_penalty:
                 best_neighbor = neighbor
                 best_penalty = neighbor_penalty
+                best_cycle = cycle
         
-        if best_penalty <= current_penalty or best_penalty == max_penalty:
+        if best_penalty >= penalty_dp(best_cycle, children) or best_penalty == 0:
             break
         else:
-            current = best_neighbor
-            current_penalty = best_penalty
+            current.remove(best_cycle)
+            current.extend(best_neighbor)
 
     return current
+
+def solution_to_set(solution):
+    retval = set()
+    for cycle in solution:
+        for node in cycle:
+            retval.add(node)
+    return retval
 
 def random_solution(graph, component, children):
     #TODO: fix iteration_order
@@ -132,19 +140,19 @@ def dynamic_programming(graph, V, children):
     minOverVertices = []
 
     if not V:
-        return []
+        return [0, []] 
 
     for v in V:
         cycles = bfs(graph, V, v)
         minOverCycles = []
 
         if (len(cycles) == 0):
-            minOverCycles.append([penalty_overall(graph, V, children), []])
+            minOverCycles.append([penalty_dp(V, children), []])
         else:
             for cycle in cycles:
                 remainingVertices = list(set(V) - set(cycle))
                 keyRemainingVertices = tuple(remainingVertices)
-                if (keyRemainingVertices in remVertMem.keys()):
+                if keyRemainingVertices in remVertMem:
                     minOverCycles.append(remVertMem[keyRemainingVertices])
                 else:
                     recurse = dynamic_programming(graph, remainingVertices, children)
@@ -156,6 +164,15 @@ def dynamic_programming(graph, V, children):
     remVertMem[tuple(V)] = optimalPenalty
     
     return optimalPenalty
+
+def penalty_dp(nodes_left, children):
+    penalty = 0
+    for node in nodes_left:
+        if node in children:
+            penalty += 2
+        else:
+            penalty += 1
+    return penalty
 
 def penalty_overall(graph, solution, children):
     resolved = set()
