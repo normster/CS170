@@ -123,6 +123,36 @@ def random_solution(graph, component, children):
                 nodes_left.remove(nd)
     solution, nodes_left
 
+def dynamic_programming(graph, V, children):
+    
+    minOverVertices = []
+
+    if (len(V) == 0):
+        return [0,[]]
+
+    for v in V:
+        cycles = bfs(graph, v, V)
+        minOverCycles = []
+
+        if (len(cycles) == 0):
+            minOverCycles.append([penalty(V, children), []])
+        else:
+            for cycle in cycles:
+                remainingVertices = list(set(V) - set(cycle))
+                keyRemainingVertices = tuple(remainingVertices)
+                if (keyRemainingVertices in remVertMem.keys()):
+                    minOverCycles.append(remVertMem[keyRemainingVertices])
+                else:
+                    recurse = dynamic_programming(graph, remainingVertices, children)
+                    minOverCycles.append([recurse[0], recurse[1] + [cycle]])
+
+        minOverVertices.append(min(minOverCycles, key=lambda x:x[0]))
+
+    optimalPenalty = min(minOverVertices,key=lambda x:x[0])
+    remVertMem[tuple(V)] = optimalPenalty
+    
+    return optimalPenalty
+
 def penalty_overall(graph, solution, children):
     resolved = set()
     penalty = 0
