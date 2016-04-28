@@ -93,7 +93,7 @@ def local_search(graph, component, children, solution, leftovers):
     
     while True:
         best_neighbor = None
-        best_penalty = float("inf")
+        best_penalty = float("-inf")
         max_penalty = penalty_reduction(graph, [[n for n in component]], children)
         for cycle in current:
             nodes_left = set(cycle) | leftovers
@@ -139,7 +139,7 @@ def dynamic_programming(graph, V, children):
         minOverCycles = []
 
         if (len(cycles) == 0):
-            minOverCycles.append([penalty_reduction(graph, V, children), []])
+            minOverCycles.append([penalty_overall(graph, V, children), []])
         else:
             for cycle in cycles:
                 remainingVertices = list(set(V) - set(cycle))
