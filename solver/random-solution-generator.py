@@ -33,16 +33,18 @@ def main(argv):
                 if instance not in SKIPPED:
                     graph, num_nodes, children = read_graph("%d.in" % instance)
                     nodes_left = [i for i in range(num_nodes)]
-                    components = component_finder(graph, num_nodes)
-                    solution = []
-                    for c in components:
-                        if not acyclic(c):
-                            if size(c) > DP_MAX_SIZE:
-                                solution += local_search(c)
-                            else:
-                                solution += dynamic_programming(c)
+                    # components = component_finder(graph, num_nodes)
+                    # solution = []
+                    # for c in components:
+                    #     if not acyclic(c):
+                    #         if size(c) > DP_MAX_SIZE:
+                    #             solution += local_search(c)
+                    #         else:
+                    #             solution += dynamic_programming(c)
 
-                    print("Penalty for instance %d: %d" % (instance, penalty(solution)))
+                    # print("Penalty for instance %d: %d" % (instance, penalty(solution)))
+                    penalty = random_solution(graph, num_nodes, children, nodes_left)
+                    print("Penalty for instance " + str(instance) + ": " + str(penalty))
 
         else:
             graph, num_nodes, children = read_graph(argv[0])
@@ -72,9 +74,10 @@ def random_solution(graph, num_nodes, children, nodes_left):
             #once we've incorporated a cycle into the solution, we remove the nodes from consideration
             for nd in cycle:
                 nodes_left.remove(nd)
+    return penalty(nodes_left, children)
     #return cycles used
 
-def penalty():
+def penalty(nodes_left, children):
     penalty = 0
     for node in nodes_left:
         if node in children:
@@ -113,14 +116,13 @@ def find_cycles_dfs(graph, node, nodes_left):
         if node in graph[tail]:
             cycles.append(current)
             num_cycles += 1
-        else:
-            if len(current) <= 4:
-                for neighbor in graph[tail]:
-                    if neighbor not in current and neighbor in nodes_left:
-                        S.append(current + [neighbor])
+        if len(current) <= 4:
+            for neighbor in graph[tail]:
+                if neighbor not in current and neighbor in nodes_left and neighbor != node:
+                    S.append(current + [neighbor])
     return cycles
 
-def bfs(graph, node, remainingNodes):
+def bfs(graph, node, nodes_left):
     #list of cycles for a particular node
     cycles = []
     q = Queue.Queue()
@@ -131,21 +133,12 @@ def bfs(graph, node, remainingNodes):
         #accessing the tail
         tail = currentThread[len(currentThread) - 1]
         #checking if the tail has a backedge
-        if tail == node and len(currentThread) > 1:
-            cycles += [currentThread[0: len(currentThread) - 1]]
-            #print("Cycle detected: " + str(cycles))
-            continue
-        elif tail in currentThread[1: len(currentThread) - 1]:
-            # if we have a smaller cycle along the path, there's no point tracking it
-            continue
-        for n in graph[tail]:
-             c = copy.copy(currentThread)
-             if n in remainingNodes:
-                 c += [n]
-                 if len(c) <= 6:
-                     q.put(c)
-
-    #print("Done detecting")
+        if node in graph[tail]:
+            cycles += [currentThread]
+        if len(currentThread) <= 4:
+            for neighbor in graph[tail]:
+                if neighbor not in currentThread and neighbor in nodes_left and neighbor != node:
+                    q.put(currentThread + [neighbor])
     return cycles
 
 def choose_cycle(cycles, children):
