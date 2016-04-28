@@ -9,8 +9,6 @@ CYCLES_PER_NODE = 10
 DP_MAX_SIZE = 20
 SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
 SEARCH_ITERATIONS = 10
-# Global Memoization Variable 
-remVertMem = {}
 
 #creating graph
 def read_graph(filename):
@@ -49,20 +47,23 @@ def solve(instance):
         if not acyclic(c):
             if len(c) > DP_MAX_SIZE:
                 best_solution = None
-                best_penalty = float("inf")
+                best_penalty = float("-inf")
+                max_penalty = penalty_reduction(graph, [[n for n in c]], children)
                 for _ in range(SEARCH_ITERATIONS):
-                    solution, leftovers = random_solution(graph, component, children)
+                    solution, leftovers = random_solution(graph, c, children)
                     local_best = local_search(graph, c, children, solution, leftovers)
-                    local_penalty = penalty(graph, local_best, children)
-                    if local_penalty < best_penalty:
+                    local_penalty = penalty_reduction(graph, local_best, children)
+                    if local_penalty > best_penalty:
                         best_solution = local_best
                         best_penalty = local_penalty
+                    if max_penalty == best_penalty:
+                        break
                 solution.extend(best_solution)
             else:
                 solution.extend(dynamic_programming())
                 # clear dynamic programming dict remVertMem
 
-    print("Penalty for instance %d: %d" % (instance, penalty(graph, solution, children)))
+    print("Penalty for instance %d: %d" % (instance, penalty_overall(graph, solution, children)))
 
 def acyclic(graph, component):
     S = collections.deque()
@@ -79,38 +80,9 @@ def acyclic(graph, component):
                     S.append(neighbor)
     return True
 
-def dynamic_programming(graph, V, children):
-    
-    minOverVertices = []
-
-    if (len(V) == 0):
-        return 0
-
-    for v in V:
-
-        cycles = bfs(graph, v, V)
-        minOverCycles = []
-
-        if (len(cycles) == 0):
-            minOverCycles.append(penalty(V, children))
-        else:
-            for cycle in cycles:
-                remainingVertices = list(set(V) - set(cycle))
-                keyRemainingVertices = tuple(remainingVertices)
-                if (keyRemainingVertices in remVertMem.keys()):
-                    minOverCycles.append(remVertMem[keyRemainingVertices])
-                else:
-                    minOverCycles.append(dp(graph, remainingVertices, children))
-
-        minOverVertices.append(min(minOverCycles))
-
-    optimalPenalty = min(minOverVertices)
-    remVertMem[tuple(V)] = optimalPenalty
-    
-    return optimalPenalty
-
 def local_search(graph, component, children, solution, leftovers):
-    current_penalty = penalty(graph, current, children)
+    current = copy.copy(solution)
+    current_penalty = penalty_reduction(graph, current, children)
     
     while True:
         best_neighbor = None
@@ -119,11 +91,14 @@ def local_search(graph, component, children, solution, leftovers):
             nodes_left = cycle | leftovers
             neighbor = dynamic_programming()
             # clear remVertMem memoization dict across calls
-            if not best_neighbor or penalty(graph, neighbor, children) < best_penalty:
+            if not best_neighbor:
                 best_neighbor = neighbor
                 best_penalty = penalty(graph, neighbor, children)
-
-        if best_penalty >= current_penalty:
+            current_penalty = penalty_reduction(graph, neighbor, children)
+            if current_penalty > best_penalty:
+                best_neighbor = neighbor
+                best_penalty = current_penalty
+        if best_penalty <= current_penalty:
             break
         else:
             current = best_neighbor
@@ -131,23 +106,38 @@ def local_search(graph, component, children, solution, leftovers):
 
     return current
 
-def random_solution(graph, nodes_left, children):
-    #for now nodeIterationOrder is completely random
+def random_solution(graph, component, children):
+    #TODO: fix iteration_order
     order = iteration_order(graph)
+    nodes_left = copy.copy(component)
+    solution = []
     for node in order:
           if node in nodes_left:
-              #finding cycles starting at that node
+            #finding cycles starting at that node
             cycles = find_cycles_dfs(graph, node, nodes_left)
-               #choosing a completely random cycle
+            #TODO: fix choose_cycle
             cycle = choose_cycle(cycles, children)
             #once we've incorporated a cycle into the solution, we remove the nodes from consideration
+            solution.append(cycle)
             for nd in cycle:
                 nodes_left.remove(nd)
-    return penalty(graph, nodes_left, children)
-    #return cycles-used, leftovers
+    solution, nodes_left
 
-#todo: fix penalty
-def penalty(graph, solution, children):
+def penalty_overall(graph, solution, children):
+    resolved = set()
+    penalty = 0
+    for cycle in solution:
+        for node in cycle:
+            resolved.add(node)
+    for i in range(len(graph)):
+        if i not in resolved:
+            if i in children:
+                penalty += 2
+            else:
+                penalty += 1
+    return penalty
+
+def penalty_reduction(graph, solution, children):
     penalty = 0
     for cycle in solution:
         for node in cycle:
@@ -190,7 +180,7 @@ def find_cycles_dfs(graph, node, nodes_left):
             num_cycles += 1
         if len(current) <= 4:
             for neighbor in graph[tail]:
-                if neighbor not in current and neighbor in nodes_left and neighbor != node:
+                if neighbor not in current and neighbor in nodes_left:
                     S.append(current + [neighbor])
     return cycles
 
@@ -201,16 +191,16 @@ def bfs(graph, node, nodes_left):
     q.put([node])
     while q.qsize() > 0:
         #current list of nodes in a prospective cycle
-        currentThread = q.get()
+        current_thread = q.get()
         #accessing the tail
-        tail = currentThread[-1]
+        tail = current_thread[-1]
         #checking if the tail has a backedge
         if node in graph[tail]:
-            cycles.append(currentThread)
-        if len(currentThread) <= 4:
+            cycles.append(current_thread)
+        if len(current_thread) <= 4:
             for neighbor in graph[tail]:
-                if neighbor not in currentThread and neighbor in nodes_left:
-                    q.put(currentThread + [neighbor])
+                if neighbor not in current_thread and neighbor in nodes_left:
+                    q.put(current_thread + [neighbor])
     return cycles
 
 def choose_cycle(cycles, children):
