@@ -2,8 +2,14 @@ def scc(graph):
     V = len(graph)
     vertex_order = vertices_in_decreasing_post_order(graph)
     ccnum, postnum = dfs(graph, vertex_order)
-    return ccnum
+    components = {}
+    for i in range(V):
+        if ccnum[i] not in components:
+            components[ccnum[i]] = set()
+        components[ccnum[i]].add(i)
+    return [components[k] for k in components]
 
+    
 # input "graph" is an adjacency list
 # outputs a list where if the i-th and j-th items have the same value, then vertex i and vertex j are in the same strongly connected component
 def dfs(graph, vertex_order):
@@ -37,16 +43,6 @@ def dfs(graph, vertex_order):
 
     return ccnum, postnum
 
-'''
-def neighbors(graph, v):
-    V = len(graph)
-    neighbors_list = []
-    for i in range(V):
-        if graph[v][i] == 1:
-            neighbors_list.append(i)
-    return neighbors_list
-'''
-
 def neighbors(graph, v):
     return graph[v]
 
@@ -64,8 +60,4 @@ def transpose_graph(graph):
             reverse_graph[u].add(v)
     return reverse_graph
 
-g = [[0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 0], [0, 1, 0, 0, 0, 1], [0, 1, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 1, 0]]
-
-gadj = [[], [0, 4], [1, 5], [1], [1], [2, 4]]
-
-gadj = map(set, gadj)
+g = [set([]), set([0, 4]), set([1, 5]), set([1]), set([1]), set([2, 4])]
