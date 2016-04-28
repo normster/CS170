@@ -9,6 +9,8 @@ CYCLES_PER_NODE = 10
 DP_MAX_SIZE = 20
 SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
 SEARCH_ITERATIONS = 10
+# Global Memoization Variable 
+remVertMem = {}
 
 #creating graph
 def read_graph(filename):
@@ -58,6 +60,7 @@ def solve(instance):
                 solution.extend(best_solution)
             else:
                 solution.extend(dynamic_programming())
+                # clear dynamic programming dict remVertMem
 
     print("Penalty for instance %d: %d" % (instance, penalty(graph, solution, children)))
 
@@ -76,8 +79,35 @@ def acyclic(graph, component):
                     S.append(neighbor)
     return True
 
-def dynamic_programming():
-    return None
+def dynamic_programming(graph, V, children):
+    
+    minOverVertices = []
+
+    if (len(V) == 0):
+        return 0
+
+    for v in V:
+
+        cycles = bfs(graph, v, V)
+        minOverCycles = []
+
+        if (len(cycles) == 0):
+            minOverCycles.append(penalty(V, children))
+        else:
+            for cycle in cycles:
+                remainingVertices = list(set(V) - set(cycle))
+                keyRemainingVertices = tuple(remainingVertices)
+                if (keyRemainingVertices in remVertMem.keys()):
+                    minOverCycles.append(remVertMem[keyRemainingVertices])
+                else:
+                    minOverCycles.append(dp(graph, remainingVertices, children))
+
+        minOverVertices.append(min(minOverCycles))
+
+    optimalPenalty = min(minOverVertices)
+    remVertMem[tuple(V)] = optimalPenalty
+    
+    return optimalPenalty
 
 def local_search(graph, component, children, solution, leftovers):
     current_penalty = penalty(graph, current, children)
@@ -88,6 +118,7 @@ def local_search(graph, component, children, solution, leftovers):
         for cycle in current:
             nodes_left = cycle | leftovers
             neighbor = dynamic_programming()
+            # clear remVertMem memoization dict across calls
             if not best_neighbor or penalty(graph, neighbor, children) < best_penalty:
                 best_neighbor = neighbor
                 best_penalty = penalty(graph, neighbor, children)
