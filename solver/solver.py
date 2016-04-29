@@ -93,7 +93,7 @@ def local_search(graph, component, children, solution, leftovers):
     while True:
         best_neighbor = None
         best_penalty = float("inf")
-        best_cycle = None
+        best_cycle_to_remove = None
         for cycle in current:
             nodes_left = set(cycle) | leftovers
             tmp = dynamic_programming(graph, nodes_left, children)
@@ -102,14 +102,19 @@ def local_search(graph, component, children, solution, leftovers):
             if not best_neighbor or neighbor_penalty < best_penalty:
                 best_neighbor = neighbor
                 best_penalty = neighbor_penalty
-                best_cycle = cycle
+                best_cycle_to_remove = cycle
 
-        leftovers -= set(best_cycle)
+        old_leftovers = copy.copy(leftovers)
+        leftovers -= set(best_cycle_to_remove)
         leftovers |= solution_to_set(best_neighbor)
-        if best_penalty >= penalty_dp(best_cycle, children) or best_penalty == 0:
+        if best_penalty >= penalty_dp(old_leftovers, children):
+            break
+        elif best_penalty == 0:
+            current.remove(best_cycle_to_remove)
+            current.extend(best_neighbor)
             break
         else:
-            current.remove(best_cycle)
+            current.remove(best_cycle_to_remove)
             current.extend(best_neighbor)
 
     return current
