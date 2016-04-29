@@ -5,11 +5,12 @@ import Queue
 import operator
 import scc
 import copy
+import checker
 
 CYCLES_PER_NODE = 5
 DP_MAX_SIZE = 10
-SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
-SEARCH_ITERATIONS = 10
+#SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
+SEARCH_ITERATIONS = 20
 remVertMem = {}
 
 #creating graph
@@ -35,26 +36,31 @@ def main(argv):
     else:
         if argv[0] == "all":
             for instance in range(1, 493):
-                if instance not in SKIPPED:
-                    solve(instance)
+                solve(instance)
         else:
             solve(int(argv[0]))
 
-def solve(instance):
+def solve(instance, log_file):
     graph, children = read_graph("%d.in" % instance)
     nodes_left = [i for i in range(len(graph))]
     components = scc.scc(graph)
     solution = []
+    log_file.write("Found %d strongly connected components\n" % len(components))
+    counter = 1
     for c in components:
+        log_file.write("\nCURRENTLY WORKING ON COMPONENT %d\n" % counter)
+        counter += 1
         if not acyclic(graph, c):
             if len(c) > DP_MAX_SIZE:
                 best_solution = None
                 best_penalty = float("-inf")
                 max_penalty = penalty_reduction(graph, [[n for n in c]], children)
                 for _ in range(SEARCH_ITERATIONS):
-                    solution, leftovers = random_solution(graph, c, children)
-                    local_best = local_search(graph, c, children, solution, leftovers)
+                    tmp_solution, leftovers = random_solution(graph, c, children)
+                    log_file.write("New random solution with score: %d\n" % penalty_overall(graph, tmp_solution, children))
+                    local_best = local_search(graph, c, children, tmp_solution, leftovers)
                     local_penalty = penalty_reduction(graph, local_best, children)
+                    log_file.write("Local search improved score to: %d\n" % penalty_overall(graph, local_best, children))
                     if local_penalty > best_penalty:
                         best_solution = local_best
                         best_penalty = local_penalty
@@ -62,30 +68,18 @@ def solve(instance):
                         break
                 solution.extend(best_solution)
             else:
-                solution.extend(dynamic_programming(graph, c, children)[1])
+                tmp = dynamic_programming(graph, c, children)
+                log_file.write("Dynamic programming solution found with score: %d\n" % tmp[0])
+                solution.extend(tmp[1])
                 remVertMem = {}
+        else:
+            log_file.write("Skipping acyclic component\n")
 
-    print("Penalty for instance %d: %d" % (instance, penalty_overall(graph, solution, children)))
+    return solution, penalty_overall(graph, solution, children), checker.check(graph, solution, children)
+    #print("Penalty for instance %d: %d" % (instance, penalty_overall(graph, solution, children)))
 
 def acyclic(graph, component):
-    if not component:
-        return True
-
-    S = collections.deque()
-    start = component.pop()
-    component.add(start)
-    S.append(start)
-    visited = set()
-    while S:
-        current = S.pop()
-        if current in visited:
-            return False
-        else:
-            visited.add(current)
-            for neighbor in graph[current]:
-                if neighbor in component:
-                    S.append(neighbor)
-    return True
+    return len(component) <= 1
 
 def local_search(graph, component, children, solution, leftovers):
     current = copy.copy(solution)
