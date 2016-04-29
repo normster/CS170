@@ -1,0 +1,65 @@
+Found 1 strongly connected components
+
+CURRENTLY WORKING ON COMPONENT 1
+New random solution with penalty in component: 37. Took 0 sec
+Local search improved penalty in component to: 11. Took 9 sec
+Best solution reduces penalty in component to: 11
+New random solution with penalty in component: 37. Took 0 sec
+Local search improved penalty in component to: 9. Took 9 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 41. Took 0 sec
+Local search improved penalty in component to: 9. Took 24 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 41. Took 0 sec
+Local search improved penalty in component to: 12. Took 14 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 34. Took 0 sec
+Local search improved penalty in component to: 12. Took 6 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 41. Took 0 sec
+Local search improved penalty in component to: 9. Took 17 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 44. Took 0 sec
+Local search improved penalty in component to: 13. Took 25 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 44. Took 0 sec
+Local search improved penalty in component to: 16. Took 15 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 42. Took 0 sec
+Local search improved penalty in component to: 13. Took 15 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 36. Took 0 sec
+Local search improved penalty in component to: 9. Took 8 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 35. Took 0 sec
+Local search improved penalty in component to: 12. Took 9 sec
+Best solution reduces penalty in component to: 9
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 8. Took 2 sec
+Best solution reduces penalty in component to: 8
+New random solution with penalty in component: 44. Took 0 sec
+Local search improved penalty in component to: 17. Took 14 sec
+Best solution reduces penalty in component to: 8
+New random solution with penalty in component: 42. Took 0 sec
+Local search improved penalty in component to: 10. Took 14 sec
+Best solution reduces penalty in component to: 8
+New random solution with penalty in component: 39. Took 0 sec
+Local search improved penalty in component to: 17. Took 12 sec
+Best solution reduces penalty in component to: 8
+New random solution with penalty in component: 32. Took 0 sec
+Local search improved penalty in component to: 13. Took 5 sec
+Best solution reduces penalty in component to: 8
+New random solution with penalty in component: 42. Took 0 sec
+Local search improved penalty in component to: 13. Took 18 sec
+Best solution reduces penalty in component to: 8
+New random solution with penalty in component: 41. Took 0 sec
+Local search improved penalty in component to: 12. Took 16 sec
+Best solution reduces penalty in component to: 8
+New random solution with penalty in component: 46. Took 0 sec
+Local search improved penalty in component to: 6. Took 26 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 35. Took 0 sec
+Local search improved penalty in component to: 11. Took 7 sec
+Best solution reduces penalty in component to: 6
+Total penalty: 6
+SOLUTION IS VALID

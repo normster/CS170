@@ -1,0 +1,26 @@
+Found 1 strongly connected components
+
+CURRENTLY WORKING ON COMPONENT 1
+New random solution with penalty in component: 34. Took 0 sec
+Local search improved penalty in component to: 4. Took 10 sec
+Best solution reduces penalty in component to: 4
+New random solution with penalty in component: 32. Took 0 sec
+Local search improved penalty in component to: 2. Took 6 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 36. Took 0 sec
+Local search improved penalty in component to: 2. Took 8 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 44. Took 0 sec
+Local search improved penalty in component to: 2. Took 23 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 40. Took 0 sec
+Local search improved penalty in component to: 3. Took 10 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 30. Took 0 sec
+Local search improved penalty in component to: 2. Took 4 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 0. Took 2 sec
+Best solution reduces penalty in component to: 0
+Total penalty: 0
+SOLUTION IS VALID

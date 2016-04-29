@@ -1,0 +1,78 @@
+Found 4 strongly connected components
+
+CURRENTLY WORKING ON COMPONENT 1
+New random solution with penalty in component: 3. Took 0 sec
+Local search improved penalty in component to: 0. Took 0 sec
+Best solution reduces penalty in component to: 0
+
+CURRENTLY WORKING ON COMPONENT 2
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 3
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 6. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 9. Took 0 sec
+Local search improved penalty in component to: 9. Took 0 sec
+Best solution reduces penalty in component to: 6
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 10. Took 0 sec
+Best solution reduces penalty in component to: 6
+
+CURRENTLY WORKING ON COMPONENT 4
+New random solution with penalty in component: 1. Took 0 sec
+Local search improved penalty in component to: 0. Took 1 sec
+Best solution reduces penalty in component to: 0
+Total penalty: 11
+ERROR SOLUTION IS NOT VALID, invalid edge from 425 to 424

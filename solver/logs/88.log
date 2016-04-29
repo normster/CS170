@@ -1,0 +1,56 @@
+Found 1 strongly connected components
+
+CURRENTLY WORKING ON COMPONENT 1
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 2. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 3. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 20. Took 0 sec
+Local search improved penalty in component to: 3. Took 2 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 4. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 8. Took 0 sec
+Local search improved penalty in component to: 3. Took 0 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 20. Took 0 sec
+Local search improved penalty in component to: 3. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 8. Took 0 sec
+Local search improved penalty in component to: 3. Took 0 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 4. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 12. Took 0 sec
+Local search improved penalty in component to: 4. Took 0 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 3. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 27. Took 0 sec
+Local search improved penalty in component to: 4. Took 8 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 4. Took 2 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 3. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 25. Took 0 sec
+Local search improved penalty in component to: 2. Took 11 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 5. Took 6 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 3. Took 1 sec
+Best solution reduces penalty in component to: 2
+New random solution with penalty in component: 10. Took 0 sec
+Local search improved penalty in component to: 0. Took 0 sec
+Best solution reduces penalty in component to: 0
+Total penalty: 0
+ERROR SOLUTION IS NOT VALID, invalid edge from 132 to 139

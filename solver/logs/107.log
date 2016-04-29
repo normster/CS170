@@ -1,0 +1,1174 @@
+Found 75 strongly connected components
+
+CURRENTLY WORKING ON COMPONENT 1
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 2
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 3
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 4
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 5
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 6
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 7
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 8
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 9
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 10
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 11
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 12
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 13
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 14
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 15
+Dynamic programming solution found with score: 6. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 16
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 17
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 18
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 19
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 20
+Dynamic programming solution found with score: 12. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 21
+Dynamic programming solution found with score: 8. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 22
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 23
+Dynamic programming solution found with score: 9. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 24
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+New random solution with penalty in component: 23. Took 0 sec
+Local search improved penalty in component to: 23. Took 0 sec
+Best solution reduces penalty in component to: 23
+
+CURRENTLY WORKING ON COMPONENT 25
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+New random solution with penalty in component: 18. Took 0 sec
+Local search improved penalty in component to: 18. Took 0 sec
+Best solution reduces penalty in component to: 18
+
+CURRENTLY WORKING ON COMPONENT 26
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 27
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 28
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 29
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 30
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+New random solution with penalty in component: 21. Took 0 sec
+Local search improved penalty in component to: 21. Took 0 sec
+Best solution reduces penalty in component to: 21
+
+CURRENTLY WORKING ON COMPONENT 31
+Dynamic programming solution found with score: 6. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 32
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 33
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 34
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 35
+Dynamic programming solution found with score: 8. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 36
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 37
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 38
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 39
+Dynamic programming solution found with score: 12. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 40
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+
+CURRENTLY WORKING ON COMPONENT 41
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+
+CURRENTLY WORKING ON COMPONENT 42
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+
+CURRENTLY WORKING ON COMPONENT 43
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+New random solution with penalty in component: 24. Took 0 sec
+Local search improved penalty in component to: 24. Took 0 sec
+Best solution reduces penalty in component to: 24
+
+CURRENTLY WORKING ON COMPONENT 44
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+
+CURRENTLY WORKING ON COMPONENT 45
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 46
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 47
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 48
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 49
+Dynamic programming solution found with score: 9. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 50
+Dynamic programming solution found with score: 10. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 51
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+New random solution with penalty in component: 16. Took 0 sec
+Local search improved penalty in component to: 16. Took 0 sec
+Best solution reduces penalty in component to: 16
+
+CURRENTLY WORKING ON COMPONENT 52
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 53
+Dynamic programming solution found with score: 9. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 54
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+New random solution with penalty in component: 17. Took 0 sec
+Local search improved penalty in component to: 17. Took 0 sec
+Best solution reduces penalty in component to: 17
+
+CURRENTLY WORKING ON COMPONENT 55
+Dynamic programming solution found with score: 9. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 56
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+
+CURRENTLY WORKING ON COMPONENT 57
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+
+CURRENTLY WORKING ON COMPONENT 58
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+New random solution with penalty in component: 15. Took 0 sec
+Local search improved penalty in component to: 15. Took 0 sec
+Best solution reduces penalty in component to: 15
+
+CURRENTLY WORKING ON COMPONENT 59
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+New random solution with penalty in component: 13. Took 0 sec
+Local search improved penalty in component to: 13. Took 0 sec
+Best solution reduces penalty in component to: 13
+
+CURRENTLY WORKING ON COMPONENT 60
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+New random solution with penalty in component: 22. Took 0 sec
+Local search improved penalty in component to: 22. Took 0 sec
+Best solution reduces penalty in component to: 22
+
+CURRENTLY WORKING ON COMPONENT 61
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 62
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+New random solution with penalty in component: 14. Took 0 sec
+Local search improved penalty in component to: 14. Took 0 sec
+Best solution reduces penalty in component to: 14
+
+CURRENTLY WORKING ON COMPONENT 63
+New random solution with penalty in component: 4. Took 0 sec
+Local search improved penalty in component to: 0. Took 0 sec
+Best solution reduces penalty in component to: 0
+
+CURRENTLY WORKING ON COMPONENT 64
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 65
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 66
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 67
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 68
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 69
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 70
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 71
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 72
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 73
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 74
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 75
+Dynamic programming solution found with score: 0. Took 0 sec
+Total penalty: 410
+SOLUTION IS VALID

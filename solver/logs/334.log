@@ -1,0 +1,152 @@
+Found 49 strongly connected components
+
+CURRENTLY WORKING ON COMPONENT 1
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 2
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 3
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 4
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 5
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 6
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 7
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 8
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 9
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 10
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 11
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 12
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 13
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 14
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 15
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 16
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 17
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 18
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 19
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 20
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 21
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 22
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 23
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 24
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 25
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 26
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 27
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 28
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 29
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 30
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 31
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 32
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 33
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 34
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 35
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 36
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 37
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 38
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 39
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 40
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 41
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 42
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 43
+Dynamic programming solution found with score: 0. Took 0 sec
+
+CURRENTLY WORKING ON COMPONENT 44
+New random solution with penalty in component: 0. Took 0 sec
+Local search improved penalty in component to: 0. Took 0 sec
+Best solution reduces penalty in component to: 0
+
+CURRENTLY WORKING ON COMPONENT 45
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 46
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 47
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 48
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 49
+Skipping acyclic component
+Total penalty: 43
+ERROR SOLUTION IS NOT VALID, invalid edge from 2 to 76

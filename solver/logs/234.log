@@ -1,0 +1,74 @@
+Found 4 strongly connected components
+
+CURRENTLY WORKING ON COMPONENT 1
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 2
+New random solution with penalty in component: 223. Took 0 sec
+Local search improved penalty in component to: 144. Took 300 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 201. Took 0 sec
+Local search improved penalty in component to: 163. Took 120 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 212. Took 0 sec
+Local search improved penalty in component to: 172. Took 146 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 227. Took 0 sec
+Local search improved penalty in component to: 161. Took 294 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 199. Took 0 sec
+Local search improved penalty in component to: 166. Took 134 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 218. Took 0 sec
+Local search improved penalty in component to: 166. Took 226 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 225. Took 0 sec
+Local search improved penalty in component to: 152. Took 196 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 196. Took 0 sec
+Local search improved penalty in component to: 155. Took 162 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 214. Took 0 sec
+Local search improved penalty in component to: 165. Took 219 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 209. Took 0 sec
+Local search improved penalty in component to: 161. Took 177 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 208. Took 0 sec
+Local search improved penalty in component to: 159. Took 207 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 218. Took 0 sec
+Local search improved penalty in component to: 164. Took 210 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 202. Took 0 sec
+Local search improved penalty in component to: 170. Took 142 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 218. Took 0 sec
+Local search improved penalty in component to: 159. Took 243 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 228. Took 0 sec
+Local search improved penalty in component to: 166. Took 218 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 208. Took 0 sec
+Local search improved penalty in component to: 156. Took 191 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 225. Took 0 sec
+Local search improved penalty in component to: 158. Took 325 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 195. Took 0 sec
+Local search improved penalty in component to: 148. Took 174 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 216. Took 0 sec
+Local search improved penalty in component to: 156. Took 215 sec
+Best solution reduces penalty in component to: 144
+New random solution with penalty in component: 205. Took 0 sec
+Local search improved penalty in component to: 157. Took 157 sec
+Best solution reduces penalty in component to: 144
+
+CURRENTLY WORKING ON COMPONENT 3
+Skipping acyclic component
+
+CURRENTLY WORKING ON COMPONENT 4
+Skipping acyclic component
+Total penalty: 147
+SOLUTION IS VALID
