@@ -103,7 +103,9 @@ def local_search(graph, component, children, solution, leftovers):
                 best_neighbor = neighbor
                 best_penalty = neighbor_penalty
                 best_cycle = cycle
-        
+
+        leftovers -= set(best_cycle)
+        leftovers |= solution_to_set(best_neighbor)
         if best_penalty >= penalty_dp(best_cycle, children) or best_penalty == 0:
             break
         else:
