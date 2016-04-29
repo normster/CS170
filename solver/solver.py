@@ -40,40 +40,47 @@ def main(argv):
         else:
             solve(int(argv[0]))
 
-def solve(instance, log_file):
+def solve(instance, log_file=None):
     graph, children = read_graph("%d.in" % instance)
     nodes_left = [i for i in range(len(graph))]
     components = scc.scc(graph)
     solution = []
-    log_file.write("Found %d strongly connected components\n" % len(components))
+    if log_file:
+        log_file.write("Found %d strongly connected components\n" % len(components))
     counter = 1
     for c in components:
-        log_file.write("\nCURRENTLY WORKING ON COMPONENT %d\n" % counter)
+        if log_file:
+            log_file.write("\nCURRENTLY WORKING ON COMPONENT %d\n" % counter)
         counter += 1
         if not acyclic(graph, c):
             if len(c) > DP_MAX_SIZE:
                 best_solution = None
-                best_penalty = float("-inf")
-                max_penalty = penalty_reduction(graph, [[n for n in c]], children)
+                best_penalty = float("inf")
                 for _ in range(SEARCH_ITERATIONS):
                     tmp_solution, leftovers = random_solution(graph, c, children)
-                    log_file.write("New random solution with score: %d\n" % penalty_overall(graph, tmp_solution, children))
+                    if log_file:
+                        log_file.write("New random solution with score: %d\n" % penalty_overall(graph, tmp_solution, children, c))
                     local_best = local_search(graph, c, children, tmp_solution, leftovers)
-                    local_penalty = penalty_reduction(graph, local_best, children)
-                    log_file.write("Local search improved score to: %d\n" % penalty_overall(graph, local_best, children))
-                    if local_penalty > best_penalty:
+                    local_penalty = penalty_overall(graph, local_best, children, c)
+                    if log_file:
+                        log_file.write("Local search improved score to: %d\n" % penalty_overall(graph, local_best, children, c))
+                    if local_penalty < best_penalty:
                         best_solution = local_best
                         best_penalty = local_penalty
-                    if max_penalty == best_penalty:
+                    if log_file:
+                        log_file.write("Best solution reduces score by: %s\n" % str(best_penalty))
+                    if best_penalty == 0:
                         break
                 solution.extend(best_solution)
             else:
                 tmp = dynamic_programming(graph, c, children)
-                log_file.write("Dynamic programming solution found with score: %d\n" % tmp[0])
+                if log_file:
+                    log_file.write("Dynamic programming solution found with score: %d\n" % tmp[0])
                 solution.extend(tmp[1])
                 remVertMem = {}
         else:
-            log_file.write("Skipping acyclic component\n")
+            if log_file:
+                log_file.write("Skipping acyclic component\n")
 
     return solution, penalty_overall(graph, solution, children), checker.check(graph, solution, children)
     #print("Penalty for instance %d: %d" % (instance, penalty_overall(graph, solution, children)))
@@ -82,6 +89,7 @@ def acyclic(graph, component):
     return len(component) <= 1
 
 def local_search(graph, component, children, solution, leftovers):
+    leftovers = copy.copy(leftovers)
     current = copy.copy(solution)
     
     while True:
@@ -98,7 +106,7 @@ def local_search(graph, component, children, solution, leftovers):
                 best_penalty = neighbor_penalty
                 best_cycle_to_remove = cycle
 
-        old_leftovers = copy.copy(leftovers)
+        old_leftovers = copy.copy(leftovers) 
         leftovers -= set(best_cycle_to_remove)
         leftovers |= solution_to_set(best_neighbor)
         if best_penalty >= penalty_dp(old_leftovers, children):
@@ -175,14 +183,16 @@ def penalty_dp(nodes_left, children):
             penalty += 1
     return penalty
 
-def penalty_overall(graph, solution, children):
+def penalty_overall(graph, solution, children, nodes_left=None):
+    if nodes_left == None:
+        nodes_left = set(range(len(graph)))
     resolved = set()
     penalty = 0
     for cycle in solution:
         for node in cycle:
             resolved.add(node)
     for i in range(len(graph)):
-        if i not in resolved:
+        if i not in resolved and i in nodes_left:
             if i in children:
                 penalty += 2
             else:

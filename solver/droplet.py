@@ -19,6 +19,7 @@ def main(argv):
             tmp += "; "
         tmp = tmp[:-2]
         out.write(tmp + "\n")
+        log.write("Total penalty: %d\n" % penalty)
         if correct == "ok":
             log.write("SOLUTION IS VALID\n")
         else:
