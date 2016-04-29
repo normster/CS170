@@ -143,7 +143,6 @@ def solution_to_set(solution):
     return retval
 
 def random_solution(graph, component, children):
-    #TODO: fix iteration_order
     order = iteration_order(graph)
     nodes_left = copy.copy(component)
     solution = []
@@ -154,7 +153,8 @@ def random_solution(graph, component, children):
             #TODO: fix choose_cycle
             cycle = choose_cycle(cycles, children)
             #once we've incorporated a cycle into the solution, we remove the nodes from consideration
-            solution.append(cycle)
+            if cycle:
+                solution.append(cycle)
             for nd in cycle:
                 nodes_left.remove(nd)
     return solution, nodes_left
