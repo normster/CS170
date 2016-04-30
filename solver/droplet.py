@@ -1,7 +1,7 @@
 import sys
 import solver
 import time
-RAND_LOCAL = (238, 249)
+RAND_LOCAL = (244, 249, 344, 448, 456, 170, 288, 197, 378, 459, 462, 380, 465, 469, 479, 490)
 
 def main(argv):
     #for i in range(int(argv[0]), int(argv[1])):
