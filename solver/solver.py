@@ -11,7 +11,8 @@ import time
 CYCLES_PER_NODE = 5
 DP_MAX_SIZE = 10
 #SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
-SEARCH_ITERATIONS = 20
+SEARCH_ITERATIONS = 100
+RANDOM_LOCAL_ITERATIONS = 10
 remVertMem = {}
 
 #creating graph
@@ -41,7 +42,7 @@ def main(argv):
         else:
             solve(int(argv[0]))
 
-def solve(instance, log_file=None):
+def solve(instance, log_file=None, skip_local=False, random_local=False):
     graph, children = read_graph("%d.in" % instance)
     nodes_left = [i for i in range(len(graph))]
     components = scc.scc(graph)
@@ -55,23 +56,34 @@ def solve(instance, log_file=None):
         counter += 1
         if not acyclic(graph, c):
             if len(c) > DP_MAX_SIZE:
-                best_solution = None
+                best_solution = []
                 best_penalty = float("inf") # actual penalty in component
                 for _ in range(SEARCH_ITERATIONS):
                     random_time0 = time.time()
                     tmp_solution, leftovers = random_solution(graph, c, children)
                     random_time1 = time.time()
+                    tmp_penalty = penalty_component(graph, children, tmp_solution, c)
+                    if not tmp_solution:
+                        if log_file:
+                            log_file.write("No cycles found in this component. Returning null solution with penalty: %d\n" % tmp_penalty)
+                        break
                     if log_file:
                         log_file.write("New random solution with penalty in component: %d. Took %d sec\n" % (penalty_component(graph, children, tmp_solution, c), random_time1 - random_time0))
-                    local_time0 = time.time()
-                    local_best = local_search(graph, c, children, tmp_solution, leftovers)
-                    local_time1 = time.time()
-                    local_penalty = penalty_component(graph, children, local_best, c)
-                    if log_file:
-                        log_file.write("Local search improved penalty in component to: %d. Took %d sec\n" % (local_penalty, local_time1 - local_time0))
-                    if local_penalty < best_penalty:
-                        best_solution = local_best
-                        best_penalty = local_penalty
+                    if not skip_local:
+                        local_time0 = time.time()
+                        local_best = local_search(graph, c, children, tmp_solution, leftovers, random_local)
+                        local_time1 = time.time()
+                        local_penalty = penalty_component(graph, children, local_best, c)
+                        if log_file:
+                            log_file.write("Local search improved penalty in component to: %d. Took %d sec\n" % (local_penalty, local_time1 - local_time0))
+                        if local_penalty < best_penalty:
+                            best_solution = local_best
+                            best_penalty = local_penalty
+                    else:
+                        if tmp_penalty < best_penalty:
+                            best_solution = tmp_solution
+                            best_penalty = tmp_penalty
+
                     if log_file:
                         log_file.write("Best solution reduces penalty in component to: %d\n" % best_penalty)
                     if best_penalty == 0:
@@ -95,23 +107,37 @@ def solve(instance, log_file=None):
 def acyclic(graph, component):
     return len(component) <= 1
 
-def local_search(graph, component, children, solution, leftovers):
+def local_search(graph, component, children, solution, leftovers, random_local):
     leftovers = copy.copy(leftovers)
     current = copy.copy(solution)
     
     while True:
-        best_neighbor = None
+        best_neighbor = []
         best_penalty = float("inf") # actual penalty in component
         best_cycle_to_remove = None
         for cycle in current:
             nodes_left = set(cycle) | leftovers
-            tmp = dynamic_programming(graph, nodes_left, children)
-            new_cycles = tmp[1]
-            base_solution = copy.copy(current)
-            base_solution.remove(cycle)
-            base_solution.extend(new_cycles)
-            neighbor = base_solution # an actual neighboring solution
-            neighbor_penalty = penalty_component(graph, children, neighbor, component) # actual penalty of actual neighbor in component
+            new_cycles = []
+            neighbor = []
+            neighbor_penalty = float("inf")
+            if random_local:
+                best_random_local = []
+                best_random_penalty = float("inf")
+                for _ in RANDOM_LOCAL_ITERATIONS:
+                    tmp_random_local = random_solution(graph, nodes_left, children)
+                    tmp_random_local_penalty = penalty_component(graph, children, tmp_random_local, nodes_left)
+                    if not best_random_local or tmp_random_local_penalty < best_random_penalty:
+                        best_random_local = tmp_random_local
+                        best_random_penalty = tmp_random_local_penalty
+                neighbor = best_random_local
+                neighbor_penalty = best_random_penalty
+            else:
+                new_cycles = dynamic_programming(graph, nodes_left, children)[1]
+                base_solution = copy.copy(current)
+                base_solution.remove(cycle)
+                base_solution.extend(new_cycles)
+                neighbor = base_solution # an actual neighboring solution
+                neighbor_penalty = penalty_component(graph, children, neighbor, component) # actual penalty of actual neighbor in component
             # neighbor_penalty = tmp[0] # actual penalty of the new cycles as solution in component
             if not best_neighbor or neighbor_penalty < best_penalty:
                 best_neighbor = neighbor
@@ -123,15 +149,10 @@ def local_search(graph, component, children, solution, leftovers):
         leftovers -= solution_to_set(best_neighbor)
         if best_penalty >= penalty_component(graph, children, current, component):
             break
-        elif best_penalty == 0:
-            #current.remove(best_cycle_to_remove)
-            #current.extend(best_neighbor)
-            current = best_neighbor
-            break
         else:
-            #current.remove(best_cycle_to_remove)
-            #current.extend(best_neighbor)
             current = best_neighbor
+        if best_penalty == 0:
+            break
 
     return current
 

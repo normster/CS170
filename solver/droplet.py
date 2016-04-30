@@ -1,16 +1,18 @@
 import sys
 import solver
 import time
+RAND_LOCAL = (238, 249)
 
 def main(argv):
-    if len(argv) != 2:
-        print "Missing arguments"
-        return 
-    
-    for i in range(int(argv[0]), int(argv[1])):
+    #for i in range(int(argv[0]), int(argv[1])):
+    for s in argv:
+        i = int(s)
         out = open("solutions/%d.out" % i, "w")
         log = open("logs/%d.log" % i, "w")
-        solution, penalty, correct = solver.solve(i, log)
+        if i in RAND_LOCAL:
+            solution, penalty, correct = solver.solve(i, log, True)
+        else:
+            solution, penalty, correct = solver.solve(i, log)
         tmp = ""
         for cycle in solution:
             for node in cycle:
