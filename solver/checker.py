@@ -7,6 +7,6 @@ def check(graph, solution, children):
             else:
                 used.add(cycle[i])
             if cycle[(i+1) % len(cycle)] not in graph[cycle[i]]:
-                return "invalid edge from " + str(cycle[(i+1)%len(cycle)]) + " to " + str(cycle[i])
+                return "invalid edge from " + str(cycle[i]) + " to " + str(cycle[(i+1)%len(cycle)])
 
     return "ok"
