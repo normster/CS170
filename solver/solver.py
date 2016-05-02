@@ -13,7 +13,6 @@ DP_MAX_SIZE = 10
 #SKIPPED = (12, 15, 50, 102, 128, 154, 219, 238, 258, 352, 369, 409, 418, 429, 465)
 SEARCH_ITERATIONS = 100
 RANDOM_LOCAL_ITERATIONS = 10
-remVertMem = {}
 
 #creating graph
 def read_graph(filename):
@@ -96,7 +95,6 @@ def solve(instance, log_file=None, skip_local=False, random_local=False):
                 if log_file:
                     log_file.write("Dynamic programming solution found with score: %d. Took %d sec\n" % (tmp[0], dp_time1 - dp_time0))
                 solution.extend(tmp[1])
-                remVertMem = {}
         else:
             if log_file:
                 log_file.write("Skipping acyclic component\n")
@@ -181,33 +179,38 @@ def random_solution(graph, component, children):
     return solution, nodes_left
 
 def dynamic_programming(graph, V, children):
-    minOverVertices = []
+    remVertMem = {}
 
-    if not V:
-        return [0, []] 
+    def dynamic_programming_helper(graph, V, children):
+        minOverVertices = []
 
-    for v in V:
-        cycles = bfs(graph, V, v)
-        minOverCycles = []
+        if not V:
+            return [0, []]
 
-        if (len(cycles) == 0):
-            minOverCycles.append([penalty_component(graph, children, [], V), []])
-        else:
-            for cycle in cycles:
-                remainingVertices = list(set(V) - set(cycle))
-                keyRemainingVertices = tuple(remainingVertices)
-                if keyRemainingVertices in remVertMem:
-                    minOverCycles.append(remVertMem[keyRemainingVertices])
-                else:
-                    recurse = dynamic_programming(graph, remainingVertices, children)
-                    minOverCycles.append([recurse[0], recurse[1] + [cycle]])
+        for v in V:
+            cycles = bfs(graph, V, v)
+            minOverCycles = []
 
-        minOverVertices.append(min(minOverCycles, key=lambda x:x[0]))
+            if (len(cycles) == 0):
+                minOverCycles.append([penalty_component(graph, children, [], V), []])
+            else:
+                for cycle in cycles:
+                    remainingVertices = list(set(V) - set(cycle))
+                    keyRemainingVertices = tuple(remainingVertices)
+                    if keyRemainingVertices in remVertMem:
+                        minOverCycles.append(remVertMem[keyRemainingVertices])
+                    else:
+                        recurse = dynamic_programming_helper(graph, remainingVertices, children)
+                        minOverCycles.append([recurse[0], recurse[1] + [cycle]])
 
-    optimalPenalty = min(minOverVertices,key=lambda x:x[0])
-    remVertMem[tuple(V)] = optimalPenalty
-    
-    return optimalPenalty
+            minOverVertices.append(min(minOverCycles, key=lambda x:x[0]))
+
+        optimalPenalty = min(minOverVertices,key=lambda x:x[0])
+        remVertMem[tuple(V)] = optimalPenalty
+
+        return optimalPenalty
+
+    return dynamic_programming_helper(graph, V, children)
 
 '''
 def penalty_dp(nodes_left, children):
