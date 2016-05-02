@@ -46,9 +46,9 @@ def weave_solutions(solutions1, solutions2):
             g, c = solver.read_graph('%d.in' % i)
             penalty_diff = solver.penalty_overall(g, c, solutions1[i]) - solver.penalty_overall(g, c, solutions2[i])
             if penalty_diff <= 0:
-                log[i] = (i, 1, solutions1[i], penalty_diff)
+                log[i] = (i, 1, solutions1[i], -penalty_diff)
             else:
-                log[i] = (i, 2, solutions2[i], -penalty_diff)
+                log[i] = (i, 2, solutions2[i], penalty_diff)
     return log
 
 def extract_sol_from_log(log):
