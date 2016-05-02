@@ -10,7 +10,10 @@ def get_individual_solutions(directory_name):
         if os.path.isfile('%s/%d.out' % (directory_name, i)):
             with open('%s/%d.out' % (directory_name, i)) as f:
                 sol_str = f.read()
-                solution = [literal_eval('[' + x + ']') for x in sol_str.split('; ')]
+                if sol_str == '' or sol_str == '\n':
+                    solution = []
+                else:
+                    solution = [literal_eval('[' + x + ']') for x in sol_str.split('; ')]
                 solutions[i] = solution
     return solutions
 
@@ -20,7 +23,10 @@ def get_solutions(directory_name):
     solutions_dict = {}
     with open('%s/solutions.out' % directory_name) as f:
         for line in f:
-            solution = [literal_eval('[' + ', '.join(x.split()) + ']') for x in line.split('; ')]
+            if 'None' in line:
+                solution = []
+            else:
+                solution = [literal_eval('[' + ', '.join(x.split()) + ']') for x in line.split('; ')]
             solutions.append(solution)
     for i in range(492):
         solutions_dict[i + 1] = solutions[i]
@@ -44,3 +50,20 @@ def weave_solutions(solutions1, solutions2):
             else:
                 log.append((i, 2, solutions2[i], -penalty_diff))
     return log
+
+def extract_sol_from_log(log):
+    solutions = filter(lambda y: y != None, [x[2] for x in log])
+    found_invalid = False
+    for i in range(1, 492 + 1):
+        if checker.check(solution[i - 1]) != 'ok':
+            found_invalid = True
+            print 'Solution %d is invalid' % i
+    if not found_invalid:
+        print 'All weaved solutions are valid'
+        for i in range(1, 492 + 1):
+            if log[i][3] > 0:
+                if log[i][1] == 1:
+                    print 'Original solution better by %d' % log[i][3]
+                elif log[i][1] == 2:
+                    print 'New solution better by %d' % log[i][3]
+    return solutions
