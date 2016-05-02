@@ -34,36 +34,39 @@ def get_solutions(directory_name):
 
 # solutions1 and solutions2 should be dictionaries of instance number to list of cycles
 def weave_solutions(solutions1, solutions2):
-    log = [] # each element in form (instance, better solution number (1 or 2), better solution, penalty difference)
+    log = {} # each element in form (instance, better solution number (1 or 2), better solution, penalty difference)
     for i in range(1, 492 + 1):
         if i not in solutions1 and i not in solutions2:
-            log.append((i, None, None))
+            log[i] = (i, None, None, None)
         elif i not in solutions2:
-            log.append((i, 1, solutions1[i], None))
+            log[i] = (i, 1, solutions1[i], None)
         elif i not in solutions1:
-            log.append((i, 2, solutions2[i], None))
+            log[i] = (i, 2, solutions2[i], None)
         else:
             g, c = solver.read_graph('%d.in' % i)
             penalty_diff = solver.penalty_overall(g, c, solutions1[i]) - solver.penalty_overall(g, c, solutions2[i])
             if penalty_diff >= 0:
-                log.append((i, 1, solutions1[i], penalty_diff))
+                log[i] = (i, 1, solutions1[i], penalty_diff)
             else:
-                log.append((i, 2, solutions2[i], -penalty_diff))
+                log[i] = (i, 2, solutions2[i], -penalty_diff)
     return log
 
 def extract_sol_from_log(log):
-    solutions = filter(lambda y: y != None, [x[2] for x in log])
+    solutions = []
+    for i in range(1, 492 + 1):
+        solutions.append(log[i][2])
     found_invalid = False
     for i in range(1, 492 + 1):
-        if checker.check(solution[i - 1]) != 'ok':
+        g, c, = solver.read_graph('%d.in' % i)
+        if checker.check(g, solutions[i - 1], c) != 'ok':
             found_invalid = True
             print 'Solution %d is invalid' % i
     if not found_invalid:
         print 'All weaved solutions are valid'
         for i in range(1, 492 + 1):
-            if log[i][3] > 0:
+            if log[i][3] > 0 and log[i][3] != None:
                 if log[i][1] == 1:
-                    print 'Original solution better by %d' % log[i][3]
+                    print 'Original solution for %d better by %d' % (i, log[i][3])
                 elif log[i][1] == 2:
-                    print 'New solution better by %d' % log[i][3]
+                    print 'New solution for %d better by %d' % (i, log[i][3])
     return solutions
