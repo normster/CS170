@@ -18,10 +18,10 @@ def get_individual_solutions(directory_name):
     return solutions
 
 # get solutions from full solutions file
-def get_solutions(directory_name):
+def get_solutions(directory_name, filename='solutions.out'):
     solutions = []
     solutions_dict = {}
-    with open('%s/solutions.out' % directory_name) as f:
+    with open('%s/%s' % (directory_name, filename)) as f:
         for line in f:
             if 'None' in line:
                 solution = []
@@ -70,3 +70,19 @@ def extract_sol_from_log(log):
                 elif log[i][1] == 2:
                     print 'New solution for %d better by %d' % (i, log[i][3])
     return solutions
+
+def write_solutions_to_file(solutions, suffix=''):
+    with open('solutions%s.out' % suffix, 'w') as f:
+        for solution in solutions:
+            tmp = ""
+            for cycle in solution:
+                for node in cycle:
+                    tmp += str(node) + ", "
+                tmp = tmp[:-2]
+                tmp += "; "
+            tmp = tmp[:-2]
+            sol = tmp
+            if not sol or sol == "\n":
+                f.write('None\n')
+            else:
+                f.write(''.join(tmp.strip().split(',')) + '\n')
