@@ -5,7 +5,16 @@ RAND_LOCAL = (244, 249, 344, 448, 456, 170, 288, 197, 378, 459, 462, 380, 465, 4
 
 def main(argv):
     #for i in range(int(argv[0]), int(argv[1])):
-    for s in argv:
+    range_flag = False
+    if argv[0] == '-r':
+        range_flag = True
+        argv = argv[1:]
+    instances = None
+    if range_flag:
+        instances = range(int(argv[0]), int(argv[1]))
+    else:
+        instances = argv
+    for s in instances:
         i = int(s)
         out = open("solutions/%d.out" % i, "w")
         log = open("logs/%d.log" % i, "w")
